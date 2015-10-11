@@ -1,0 +1,21 @@
+<template name="groupItem">
+  <div class="post">
+    <div class="post-content">
+      <h3>{{title}} Id: {{_id}}</h3>
+      <p>
+        submitted by {{author}}
+      </p>
+      <p>
+      	Description:
+      	{{description}}
+      </p>
+    </div>
+
+    <a href="{{pathFor 'groupPage'}}" class="discuss btn btn-default hide {{showRouteClass 'groupsList'}} {{showRouteClass 'subcribedGroups'}}">Detail</a>
+
+    {{#if currentUser}}
+      <a id="subcribeButton" href="{{pathFor 'groupPage'}}" class="discuss btn btn-primary hide {{showRouteClass 'groupPage'}} {{subscriptionClass}}">Subscribe</a>
+    {{/if}}
+
+  </div>
+</template>

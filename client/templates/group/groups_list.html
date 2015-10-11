@@ -1,0 +1,20 @@
+<template name="groupsList">
+  <div class="posts page">
+    {{> searchBox }}
+
+    {{#if getGroups}}
+	    {{#each getGroups}}
+	      {{> searchResult this}}
+	    {{/each}}
+	    <hr>
+    {{/if}}
+
+    {{#each groups}}
+      {{> groupItem}}
+    {{/each}}
+    
+    {{#unless ready}}
+      {{> spinner}}
+    {{/unless}}
+  </div>
+</template>

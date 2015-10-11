@@ -1,0 +1,17 @@
+<template name="searchResult">
+  <div class="post">
+    <div class="post-content">
+      <h3 class="text-muted">{{{title}}} Id: {{_id}}</h3>
+      <p class="text-muted">
+        submitted by {{author}}
+      </p>
+      <p class="text-muted">
+      	Description:
+      	{{description}}
+      </p>
+    </div>
+
+    <a href="{{pathFor 'groupPage'}}" class="discuss btn btn-default">Detail</a>
+
+  </div>
+</template>

@@ -1,0 +1,24 @@
+<template name="groupSubmit">
+  <form class="main form page">
+    <div class="form-group {{errorClass 'title'}}">
+      <label class="control-label" for="title">Title *</label>
+      <div class="controls">
+          <input name="title" id="title" type="text" value="" placeholder="Name your post" class="form-control"/>
+          <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="description">Description</label>
+      <div class="controls">
+          <textarea rows="4" cols="50" name="description" id="description" value="" placeholder="Description..." class="form-control"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="description">Customize Group ID</label>
+      <div class="controls">
+            <input name="groupId" id="groupId" type="text" value="" placeholder="URL group id" class="form-control"/>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+  </form>
+</template>
